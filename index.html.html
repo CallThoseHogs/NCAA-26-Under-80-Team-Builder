@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random NCAA 26 Team Picker (Under 80 OVR)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #team {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #006400;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>NCAA 26: Get a Random Team (80 OVR or Under)</h1>
+  <button id="getTeamBtn">Get My Team</button>
+  <div id="team"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const teams = [
+        "UMass Minutemen",
+        "Akron Zips",
+        "New Mexico Lobos",
+        "FIU Panthers",
+        "UConn Huskies",
+        "Hawaii Rainbow Warriors",
+        "Nevada Wolf Pack",
+        "Charlotte 49ers",
+        "Bowling Green Falcons",
+        "Eastern Michigan Eagles",
+        "Texas State Bobcats",
+        "Old Dominion Monarchs",
+        "Ball State Cardinals",
+        "Arkansas State Red Wolves",
+        "Kent State Golden Flashes"
+      ];
+
+      document.getElementById("getTeamBtn").addEventListener("click", function () {
+        const randomTeam = teams[Math.floor(Math.random() * teams.length)];
+        document.getElementById("team").textContent = `Your team is: ${randomTeam}`;
+      });
+    });
+  </script>
+
+</body>
+</html>
